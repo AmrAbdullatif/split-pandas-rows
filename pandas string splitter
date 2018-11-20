@@ -1,0 +1,5 @@
+## Download Spam detection data-set https://archive.ics.uci.edu/ml/machine-learning-databases/00228/
+## Set the work directory 
+df = pd.read_csv(w_dir + 'SMSSpamCollection', sep= "\n", header=None)
+new_df = df[0].str.split('\t', expand=True).iloc[:,::-1]
+new_df.columns = ['input', 'target']
